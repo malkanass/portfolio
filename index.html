@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malka Nassimiha - Designer & Strategist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #000;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .location {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .intro {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px 20px;
+        }
+        
+        .intro h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .intro p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        
+        .skill-category h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .skill-category p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        .section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+        
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+        }
+        
+        .work-item {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .work-item:last-child {
+            border-bottom: none;
+        }
+        
+        .work-item .date {
+            font-size: 12px;
+            color: #999;
+            font-weight: 600;
+        }
+        
+        .work-item .title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .work-item .company {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .work-item p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .portfolio-item {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        
+        .portfolio-item .number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-item .category {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-item h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #333;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .tagline {
+                font-size: 16px;
+            }
+            
+            .section h2 {
+                font-size: 24px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#work">Work</a>
+            <a href="#resume">Résumé</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Malka Nassimiha</h1>
+        <p class="tagline">Design · Strategy · Brand · Events</p>
+        <p class="location">New York, NY</p>
+        <p style="margin-top: 30px; font-size: 14px; color: #666;">A designer and strategist at the intersection of visual identity, brand storytelling, and business development — across Milan and New York.</p>
+    </section>
+    
+    <section class="intro" id="about">
+        <h2>About</h2>
+        <h3 style="font-size: 20px; margin-bottom: 20px; color: #000;">Creative thinker. Strategic builder.</h3>
+        <p>I'm a Strategy & Entrepreneurship student at Yeshiva University's Sy Syms School of Business with a Minor in Real Estate — and a design background from the IED Istituto Europeo di Design in Milan. I bring both sides together.</p>
+        <p>From designing brand catalogs and event logistics to managing social media presence and e-commerce content, I've worked across disciplines in Milan and New York — always with an eye for detail and a drive for impact.</p>
+        <p>I speak five languages and have lived between cultures, which shapes how I communicate and create.</p>
+    </section>
+    
+    <section class="skills-section">
+        <div class="skill-category">
+            <h3>Design</h3>
+            <p>AutoCAD<br>Adobe InDesign<br>Photoshop<br>Illustrator<br>Brand Identity<br>Catalog Design</p>
+        </div>
+        <div class="skill-category">
+            <h3>Business</h3>
+            <p>Microsoft Office<br>Keynote<br>Event Planning<br>Social Media<br>Content Strategy<br>Logistics</p>
+        </div>
+        <div class="skill-category">
+            <h3>Languages</h3>
+            <p>Italian (Native)<br>English (Advanced C1)<br>Hebrew (Intermediate B1)<br>Spanish (Intermediate B1)<br>French (Basic A2)</p>
+        </div>
+    </section>
+    
+    <section class="section" id="experience">
+        <h2>Experience</h2>
+        
+        <div class="work-item">
+            <div class="date">May 2025 – Present</div>
+            <div class="title">Web Design & Content Collaborator</div>
+            <div class="company">La Sole Immobiliare · Milan, Italy (Remote)</div>
+            <p>Assisted in the creation and design of the company's real estate website. Helped write and organize content for property listings and company presentation, and supported layout design, structure, and visual identity of the site.</p>
+        </div>
+        
+        <div class="work-item">
+            <div class="date">Sep 2024 – Aug 2025</div>
+            <div class="title">Brand & Logistics Coordinator</div>
+            <div class="company">A New Home · Milan, Italy (Remote)</div>
+            <p>Supported packaging, labeling, and preparing home design products for shipping. Helped manage social media presence and content for modern home collections, and assisted with organizing inventory and ensuring smooth logistics operations.</p>
+        </div>
+        
+        <div class="work-item">
+            <div class="date">Aug 2022 – Jul 2024</div>
+            <div class="title">Brand Designer & Content Creator</div>
+            <div class="company">N.Ruben · Milan, Italy (Remote)</div>
+            <p>Designed catalogs, brand visuals, and digital content. Created social media assets and marketing materials, organized and managed in-store and corporate events.</p>
+        </div>
+        
+        <div class="work-item">
+            <div class="date">Apr 2022 – May 2023</div>
+            <div class="title">Events & Community Coordinator</div>
+            <div class="company">Kol Tuv Events · Milan, Italy</div>
+            <p>Supported the organization of travel-related events and group experiences. Handled outreach and participant hiring through social media and direct communication, and assisted in planning and managing logistics for social gatherings and tours.</p>
+        </div>
+        
+        <div class="work-item">
+            <div class="date">Sep 2021 – Jun 2022</div>
+            <div class="title">Hebrew & Jewish Studies Teacher</div>
+            <div class="company">Noam · Milan, Italy</div>
+            <p>Taught Hebrew and Jewish subjects to elementary school children. Led weekly Sunday classes and supported classroom management.</p>
+        </div>
+    </section>
+    
+    <section class="section" id="work">
+        <h2>Selected Work</h2>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="number">01</div>
+                <div class="category">Brand Design · Catalog</div>
+                <h3>N.Ruben Brand Identity & Catalog Design</h3>
+                <p>Designed complete brand visuals, seasonal catalogs, and digital content system for a Milan-based fashion brand. Created cohesive visual language across print and digital touchpoints.</p>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="number">02</div>
+                <div class="category">Web & Content · Real Estate</div>
+                <h3>La Sole Immobiliare Website</h3>
+                <p>End-to-end content architecture and visual identity support for a Milan real estate firm's new website — property listings, brand voice, and UX structure.</p>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="number">03</div>
+                <div class="category">Event Production</div>
+                <h3>Kol Tuv Group Events — Milan</h3>
+                <p>Planned and produced group travel events and social gatherings, handling participant outreach, logistics, and on-site coordination.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="resume">
+        <h2>Education</h2>
+        
+        <div class="work-item">
+            <div class="date">Jan 2024 – Present · Expected Jan 2027</div>
+            <div class="title">Yeshiva University</div>
+            <div class="company">Sy Syms School of Business</div>
+            <p><strong>B.S. Strategy & Entrepreneurship · Minor: Real Estate</strong> — New York, NY</p>
+        </div>
+        
+        <div class="work-item">
+            <div class="date">Sep 2022 – Jul 2023</div>
+            <div class="title">IED Istituto Europeo di Design</div>
+            <div class="company">Interior Design Program</div>
+            <p><strong>One academic year completed</strong> — Milan, Italy</p>
+        </div>
+    </section>
+    
+    <section class="cta" id="contact">
+        <h2 style="margin-bottom: 30px;">Let's connect</h2>
+        <p style="margin-bottom: 20px; color: #666;">Open to opportunities in design, strategy & brand.<br>Based in New York · Available for internships, freelance & collaborations</p>
+        
+        <div class="contact-info">
+            <a href="mailto:malkanassimiha12@gmail.com">Email</a>
+            <a href="tel:+15169837359">Phone</a>
+            <a href="https://linkedin.com/in/malkanassimiha" target="_blank">LinkedIn</a>
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <a href="mailto:malkanassimiha12@gmail.com" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 Malka Nassimiha</p>
+    </footer>
+</body>
+</html>
